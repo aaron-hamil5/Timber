@@ -152,8 +152,12 @@ int main()
 	sf::Clock clock;
 	#pragma endregion
 
-	/*Lanch the bee not moving so it Initializes on start*/
+	/*Lanch the bee/cloud not moving so it Initializes on start*/
 	bool beeActive = false;
+	bool clo1Active = false;
+	bool clo2Active = false;
+	bool clo3Active = false;
+	
 
 	#pragma endregion
 
@@ -195,6 +199,85 @@ int main()
 			/*Edge Remove*/
 			if (beeSpr.getPosition().x < -100) {
 				beeActive = false;
+			}
+		}
+
+		#pragma endregion
+
+		#pragma region Cloud One Movement
+
+		/*Adding movement to cloud*/
+		if (!clo1Active)
+		{
+			//Creating Random speed
+			srand((int)time(0));
+			clo1Spe= (rand() % 200) + 200;
+
+			srand((int)time(0));
+			float clo1height = (rand() % 250) + 10;
+			clo1Spr.setPosition(2000, clo1height);
+
+
+			clo1Active = true;
+		}
+		else {
+			/*Adding the movement to the bee*/
+			clo1Spr.setPosition(clo1Spr.getPosition().x - (clo1Spe * deltaTime.asSeconds()), clo1Spr.getPosition().y);
+			/*Edge Remove*/
+			if (clo1Spr.getPosition().x < -100) {
+				clo1Active = false;
+			}
+		}
+
+		#pragma endregion
+		#pragma region Cloud Two Movement
+
+		/*Adding movement to cloud*/
+		if (!clo2Active)
+		{
+			//Creating Random speed
+			srand((int)time(0));
+			clo2Spe = (rand() % 200) + 200;
+
+			srand((int)time(0));
+			float clo2height = (rand() % 350) + 10;
+			clo2Spr.setPosition(2000, clo2height);
+
+
+			clo2Active = true;
+		}
+		else {
+			/*Adding the movement to the bee*/
+			clo2Spr.setPosition(clo2Spr.getPosition().x - (clo2Spe * deltaTime.asSeconds()), clo2Spr.getPosition().y);
+			/*Edge Remove*/
+			if (clo2Spr.getPosition().x < -100) {
+				clo2Active = false;
+			}
+		}
+
+		#pragma endregion
+		#pragma region Cloud Three Movement
+
+		/*Adding movement to cloud*/
+		if (!clo3Active)
+		{
+			//Creating Random speed
+			srand((int)time(0));
+			clo3Spe = (rand() % 200) + 200;
+
+			srand((int)time(0));
+			float clo3height = (rand() % 350) + 10;
+			clo3Spr.setPosition(2000, clo3height);
+
+
+			clo3Active = true;
+		}
+		else {
+			/*Adding the movement to the bee*/
+			clo3Spr.setPosition(clo3Spr.getPosition().x - (clo3Spe * deltaTime.asSeconds()), clo3Spr.getPosition().y);
+			/*Edge Remove*/
+			if (clo3Spr.getPosition().x < -100) {
+				clo3Active = false;
 			}
 		}
 

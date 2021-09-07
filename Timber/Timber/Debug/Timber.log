@@ -1,3 +1,9 @@
 ﻿  main.cpp
-C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(185,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(191,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(214,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(217,21): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(240,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(243,21): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(266,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(269,21): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   Timber.vcxproj -> C:\Users\aaron\Documents\GitHub\Timber\Timber\Debug\Timber.exe
