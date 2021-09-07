@@ -80,6 +80,76 @@ int main()
 
 	#pragma endregion
 
+	#pragma region Clouds
+
+	#pragma region Cloud1
+
+	#pragma region Load Cloud Image
+	/*Create a texture to hold the Cloud*/
+	sf::Texture clo1Tex;
+	/*Link the image to the texture Cloud*/
+	clo1Tex.loadFromFile("assets/graphics/cloud.png");
+	#pragma endregion
+
+	#pragma region Load Sprite for Cloud
+	/*Creating a sprite to display the Cloud*/
+	sf::Sprite clo1Spr;
+	/*Linking the sprite to the texture*/
+	clo1Spr.setTexture(clo1Tex);
+	#pragma endregion
+
+	#pragma region Location of Sprite
+	/*Seeing the location of the sprite*/
+	clo1Spr.setPosition(65, 25);
+	#pragma endregion
+	#pragma endregion
+
+	#pragma region Cloud2
+
+	#pragma region Load Cloud Image
+	/*Create a texture to hold the Cloud*/
+	sf::Texture clo2Tex;
+	/*Link the image to the texture Cloud*/
+	clo2Tex.loadFromFile("assets/graphics/cloud.png");
+	#pragma endregion
+
+	#pragma region Load Sprite for Cloud
+	/*Creating a sprite to display the Cloud*/
+	sf::Sprite clo2Spr;
+	/*Linking the sprite to the texture*/
+	clo2Spr.setTexture(clo2Tex);
+	#pragma endregion
+
+	#pragma region Location of Sprite
+	/*Seeing the location of the sprite*/
+	clo2Spr.setPosition(198, 156);
+	#pragma endregion
+	#pragma endregion
+
+	#pragma region Cloud3
+
+	#pragma region Load Cloud Image
+	/*Create a texture to hold the Cloud*/
+	sf::Texture clo3Tex;
+	/*Link the image to the texture Cloud*/
+	clo3Tex.loadFromFile("assets/graphics/cloud.png");
+	#pragma endregion
+
+	#pragma region Load Sprite for Cloud
+	/*Creating a sprite to display the Cloud*/
+	sf::Sprite clo3Spr;
+	/*Linking the sprite to the texture*/
+	clo3Spr.setTexture(clo3Tex);
+	#pragma endregion
+
+	#pragma region Location of Sprite
+	/*Seeing the location of the sprite*/
+	clo3Spr.setPosition(1680, 35);
+	#pragma endregion
+	#pragma endregion
+
+	#pragma endregion
+
 	#pragma endregion
 
 	#pragma region While Window Is Open
@@ -102,6 +172,11 @@ int main()
 		#pragma region Drawing the Scene
 		/*Draw the scene*/
 		window.draw(bacGroSpr); //Background
+		#pragma region draw Clouds
+		window.draw(clo1Spr);
+		window.draw(clo2Spr);
+		window.draw(clo3Spr);
+		#pragma endregion				//Clouds
 		window.draw(treeSpr);	//Tree
 		window.draw(beeSpr);	//Bee
 		#pragma endregion
