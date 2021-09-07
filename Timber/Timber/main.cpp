@@ -51,16 +51,36 @@ int main()
 	#pragma endregion
 
 	#pragma region Location of Sprite
-	/*Seeing the location of the sprite(0,0)*/
+	/*Seeing the location of the sprite(810,0)*/
 	treeSpr.setPosition(810, 0);
 	#pragma endregion
 
 	#pragma endregion
 
+	#pragma region Bee
+
+	#pragma region Load Bee Image
+	/*Create a texture to hold the Bee*/
+	sf::Texture beeTex;
+	/*Link the image to the texture Bee*/
+	beeTex.loadFromFile("assets/graphics/bee.png");
 	#pragma endregion
 
+	#pragma region Load Sprite for Bee
+	/*Creating a sprite to display the Bee*/
+	sf::Sprite beeSpr;
+	/*Linking the sprite to the texture*/
+	beeSpr.setTexture(beeTex);
+	#pragma endregion
 
+	#pragma region Location of Sprite
+	/*Seeing the location of the sprite(250,100)*/
+	beeSpr.setPosition(250, 100);
+	#pragma endregion
 
+	#pragma endregion
+
+	#pragma endregion
 
 	#pragma region While Window Is Open
 	while (window.isOpen()) 
@@ -78,14 +98,17 @@ int main()
 		/*Update the scene*/
 		/*Clear the scene*/
 		window.clear();
+
+		#pragma region Drawing the Scene
 		/*Draw the scene*/
-		window.draw(bacGroSpr);
-		window.draw(treeSpr);
+		window.draw(bacGroSpr); //Background
+		window.draw(treeSpr);	//Tree
+		window.draw(beeSpr);	//Bee
+		#pragma endregion
+
 		/*Render the scene*/
 		window.display();
 		#pragma endregion
-
-
 	}
 #pragma endregion
 
