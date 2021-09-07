@@ -1,2 +1,3 @@
 ﻿  main.cpp
+C:\Users\aaron\Documents\GitHub\Timber\Timber\Timber\main.cpp(185,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Timber.vcxproj -> C:\Users\aaron\Documents\GitHub\Timber\Timber\Debug\Timber.exe

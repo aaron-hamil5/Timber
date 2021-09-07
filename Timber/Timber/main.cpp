@@ -144,8 +144,16 @@ int main()
 	float clo1Spe = 0.0f;
 	float clo2Spe = 0.0f;
 	float clo3Spe = 0.0f;
-	float beeSpe = 0.0f;
+	int beeSpe = 0;
 	#pragma endregion
+
+	#pragma region Control Time
+	/*Creating a variable to control Time*/
+	sf::Clock clock;
+	#pragma endregion
+
+	/*Lanch the bee not moving so it Initializes on start*/
+	bool beeActive = false;
 
 	#pragma endregion
 
@@ -163,6 +171,35 @@ int main()
 
 		#pragma region Effecting the scene
 		/*Update the scene*/
+		//Measure Time
+		sf::Time deltaTime = clock.restart();
+
+		#pragma region Bee Movement
+
+		/*Adding movement to bee*/
+		if (!beeActive) 
+		{
+			//Creating Random speed
+			srand((int)time(0));
+			beeSpe = (rand() % 200) + 200;
+
+			srand((int)time(0));
+			float beeheigt = (rand() % 500) + 500;
+			beeSpr.setPosition(2000, beeheigt);
+
+			beeActive = true;
+		}
+		else {
+			/*Adding the movement to the bee*/
+			beeSpr.setPosition(beeSpr.getPosition().x - (beeSpe * deltaTime.asSeconds()), beeSpr.getPosition().y);
+			/*Edge Remove*/
+			if (beeSpr.getPosition().x < -100) {
+				beeActive = false;
+			}
+		}
+
+		#pragma endregion
+
 		/*Clear the scene*/
 		window.clear();
 
