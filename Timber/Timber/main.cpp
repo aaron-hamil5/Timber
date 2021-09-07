@@ -105,19 +105,11 @@ int main()
 	#pragma endregion
 
 	#pragma region Cloud2
-
-	#pragma region Load Cloud Image
-	/*Create a texture to hold the Cloud*/
-	sf::Texture clo2Tex;
-	/*Link the image to the texture Cloud*/
-	clo2Tex.loadFromFile("assets/graphics/cloud.png");
-	#pragma endregion
-
 	#pragma region Load Sprite for Cloud
 	/*Creating a sprite to display the Cloud*/
 	sf::Sprite clo2Spr;
 	/*Linking the sprite to the texture*/
-	clo2Spr.setTexture(clo2Tex);
+	clo2Spr.setTexture(clo1Tex);
 	#pragma endregion
 
 	#pragma region Location of Sprite
@@ -128,18 +120,11 @@ int main()
 
 	#pragma region Cloud3
 
-	#pragma region Load Cloud Image
-	/*Create a texture to hold the Cloud*/
-	sf::Texture clo3Tex;
-	/*Link the image to the texture Cloud*/
-	clo3Tex.loadFromFile("assets/graphics/cloud.png");
-	#pragma endregion
-
 	#pragma region Load Sprite for Cloud
 	/*Creating a sprite to display the Cloud*/
 	sf::Sprite clo3Spr;
 	/*Linking the sprite to the texture*/
-	clo3Spr.setTexture(clo3Tex);
+	clo3Spr.setTexture(clo1Tex);
 	#pragma endregion
 
 	#pragma region Location of Sprite
@@ -148,6 +133,18 @@ int main()
 	#pragma endregion
 	#pragma endregion
 
+	#pragma endregion
+
+	#pragma endregion
+
+	#pragma region Object Movement
+
+	#pragma region Object speed
+	/*Creating the variables to hold the cloud movement speed*/
+	float clo1Spe = 0.0f;
+	float clo2Spe = 0.0f;
+	float clo3Spe = 0.0f;
+	float beeSpe = 0.0f;
 	#pragma endregion
 
 	#pragma endregion
