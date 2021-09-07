@@ -9,6 +9,9 @@ int main()
 	sf::RenderWindow window(vm, "Timber", sf::Style::Fullscreen);
 	#pragma endregion
 
+	#pragma region Loading Textures
+
+	#pragma region Background
 
 	#pragma region Load Background Image
 	/*Create a texture to hold the background*/
@@ -18,7 +21,7 @@ int main()
 	#pragma endregion
 
 	#pragma region Load Sprite for background
-	/*Creating a sprite to displace the background*/
+	/*Creating a sprite to display the background*/
 	sf::Sprite bacGroSpr;
 	/*Linking the sprite to the texture*/
 	bacGroSpr.setTexture(bacGroTex);
@@ -27,6 +30,33 @@ int main()
 	#pragma region Location of Sprite
 	/*Seeing the location of the sprite(0,0)*/
 	bacGroSpr.setPosition(0, 0);
+	#pragma endregion
+
+	#pragma endregion
+
+	#pragma region Tree
+
+	#pragma region Load Tree Image
+	/*Create a texture to hold the Tree*/
+	sf::Texture treeTex;
+	/*Link the image to the texture Tree*/
+	treeTex.loadFromFile("assets/graphics/tree.png");
+	#pragma endregion
+
+	#pragma region Load Sprite for Tree
+	/*Creating a sprite to display the background*/
+	sf::Sprite treeSpr;
+	/*Linking the sprite to the texture*/
+	treeSpr.setTexture(treeTex);
+	#pragma endregion
+
+	#pragma region Location of Sprite
+	/*Seeing the location of the sprite(0,0)*/
+	treeSpr.setPosition(810, 0);
+	#pragma endregion
+
+	#pragma endregion
+
 	#pragma endregion
 
 
@@ -50,6 +80,7 @@ int main()
 		window.clear();
 		/*Draw the scene*/
 		window.draw(bacGroSpr);
+		window.draw(treeSpr);
 		/*Render the scene*/
 		window.display();
 		#pragma endregion
